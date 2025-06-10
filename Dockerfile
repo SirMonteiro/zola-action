@@ -6,4 +6,3 @@ FROM debian:stable-slim
 COPY --from=builder /zola /usr/bin/zola
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-

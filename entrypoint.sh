@@ -16,5 +16,5 @@ else
     [ -n "$INPUT_OUTPUT_DIR" ] && ARGS="$ARGS --output-dir \"$INPUT_OUTPUT_DIR\""
 fi
 
-echo "Running: zola $CMD $CMD_ARGS"
+echo "Running: zola $CMD $CMD_ARGS on version $(zola --version | cut -d ' ' -f 2)"
 sh -c "zola $CMD $CMD_ARGS"
