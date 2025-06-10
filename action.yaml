@@ -1,0 +1,28 @@
+name: "Zola check and build"
+description: "Build a Zola website"
+author: "SirMonteiro"
+inputs:
+  check:
+    description: "If true, runs zola check instead of zola build."
+    required: false
+  check_skip-external-links:
+    description: "If true, skips checking external links during zola check."
+    required: false
+  drafts:
+    description: "Includes draft content in both zola check and zola build."
+    required: false
+  minify:
+    description: "Minifies the generated HTML when building the site with zola build."
+    required: false
+  base_url:
+    description: "Overrides the base URL set in config.toml during the build."
+    required: false
+  output_dir:
+    description: "Sets a custom output directory instead of the default public/."
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "zap"
+  color: "green"
