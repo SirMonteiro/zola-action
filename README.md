@@ -19,7 +19,7 @@ jobs:
     - name: Checkout main
       uses: actions/checkout@v4
     - name: Build
-      uses: SirMonteiro/zola-action@v0.20.0
+      uses: SirMonteiro/zola-action@v0.23.3
       with:
         check: false
         drafts: false
