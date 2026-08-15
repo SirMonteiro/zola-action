@@ -6,3 +6,5 @@ FROM debian:stable-slim
 COPY --from=builder /zola /usr/bin/zola
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+LABEL org.opencontainers.image.source https://github.com/SirMonteiro/zola-action \
+      org.opencontainers.image.description="A debian-slim image to have zola SSG single bin with custom entrypoint parameters"
